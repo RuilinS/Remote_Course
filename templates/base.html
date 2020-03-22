@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload File</title>
+    <style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  width: 40%;
+  border-radius: 5px;
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+<center>
+    <div class="card">
+        <div class="container">
+            <center>
+                <h4>数字识别</h4>
+
+                <form method=post enctype=multipart/form-data>
+                    <input type=file name=file>
+                    <input type=submit value=上传>
+                </form>
+            </center>
+        </div>
+    </div>
+</center>
+{% if result %}
+
+<center>
+    <div class="card">
+
+        <div class="container">
+
+            <center><h4>识别结果</h4>
+                <p class="text-info ">
+                    {{ result }}
+                </p>
+            </center>
+        </div>
+    </div>
+</center>
+{% endif %}
+
+</body>
+</html>
